@@ -28,7 +28,7 @@ class GANClassification:
         return "Real" if result[0][0] > 0.5 else "Fake"
 
 def main():
-    gan_classification = GANClassification("trained_models/cnn_95_val_acc.h5")
+    gan_classification = GANClassification("models/cnn_95_val_acc.h5")
     # Define the input and output interfaces for Gradio
     input_interface = gr.inputs.Image(shape=(256, 256))
     output_interface = gr.outputs.Textbox(label="Prediction")
